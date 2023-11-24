@@ -26,7 +26,7 @@ public class Division {
 
     private void computeModulo(int number, List<Integer> result) {
 
-        for(int value : Arrays.asList(2,3,5,7,11,13)){
+        for(int value : Arrays.asList(2,3,5,7,11,13,17)){
             if(isModulo(number, value)){
                 logicWhenModulo(value, result);
                 break;
@@ -45,23 +45,22 @@ public class Division {
     }
 
     private void computeSimpleNumbers(int number , List<Integer> result) {
-        if (isSimpleNumber(number)) {
+        if (isPrimeNumber(number)) {
             result.add(number);
         }
     }
 
-    private boolean isSimpleNumber(int number) {
-        return Arrays.asList(1, 2, 3, 5,7,11,13).contains(number);
+    private boolean isPrimeNumber(int number) {
+        return Arrays.asList(1, 2, 3, 5,7,11,13,17).contains(number);
     }
 
     private boolean isNotSimpleNumber(int number) {
-        return !isSimpleNumber(number);
+        return !isPrimeNumber(number);
     }
 
     private void setNumber(int value) {
         this.number = this.number/value;
     }
-
 
 
 }

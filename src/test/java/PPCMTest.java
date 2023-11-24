@@ -50,7 +50,12 @@ public class PPCMTest {
 
     @Test
     public void assertPPCMOfEighteenAndFifteenIsFourteen(){
-
         Assert.assertEquals(14, new PPCM(7,14).computePPCM());
+    }
+
+    @Test
+    public void assertPPCMOfSesenteenAndSeventeenIsSeventeen(){
+
+        Assert.assertEquals(17, new PPCM(17,17).computePPCM());
     }
 }
